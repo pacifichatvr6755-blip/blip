@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Blocked</title>
+    <style>
+        :root {
+            --bg-color: #0f141c;
+            --card-bg: #181f2a;
+            --accent-color: #ff4757;
+            --text-main: #ffffff;
+            --text-muted: #8b9bb4;
+            --border-color: #2e3846;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .block-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 32px;
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon-box {
+            background-color: rgba(255, 71, 87, 0.1);
+            color: var(--accent-color);
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            margin: 0 auto 20px auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 0 0 12px 0;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0 0 24px 0;
+        }
+
+        .meta-info {
+            background-color: rgba(0, 0, 0, 0.15);
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 24px;
+            text-align: left;
+            font-family: monospace;
+            font-size: 13px;
+            color: var(--text-muted);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .meta-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+
+        .meta-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .meta-label {
+            color: var(--text-muted);
+        }
+
+        .meta-value {
+            color: var(--text-main);
+            font-weight: bold;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            border: none;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #e84150;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-muted);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+        }
+        
+        .btn:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="block-card">
+        <div class="icon-box">🛑</div>
+        <h1>APPLICATION BLOCKED</h1>
+        <p>This extension or mod modification has been restricted by your configuration filter rules.</p>
+        
+        <div class="meta-info">
+            <div class="meta-row">
+                <span class="meta-label">Target App:</span>
+                <span class="meta-value">Scratch Mod Toolkit</span>
+            </div>
+            <div class="meta-row">
+                <span class="meta-label">Trigger Rule:</span>
+                <span class="meta-value">Unverified_External_Script</span>
+            </div>
+            <div class="meta-row">
+                <span class="meta-label">Status:</span>
+                <span class="meta-value" style="color: var(--accent-color);">Blocked</span>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn btn-secondary" onclick="window.close()">Dismiss</button>
+            <a href="https://docs.github.com" target="_blank" class="btn btn-primary">View GitHub Docs</a>
+        </div>
+    </div>
+
+</body>
+</html>
